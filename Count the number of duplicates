@@ -1,0 +1,12 @@
+def duplicate_count(text):
+    if text=="":
+        return 0
+    else:
+        text=text.lower()
+        n=0
+        for i in text:
+            a=text.count(i)
+            if a>1:
+                n+=1
+            text=text.translate({ord(i): None})
+        return n
