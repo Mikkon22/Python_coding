@@ -1,0 +1,8 @@
+def xo(s):
+    s=s.lower()
+    a=s.count('x')
+    b=s.count('o')
+    if b==a:
+        return True 
+    else:
+        return False
