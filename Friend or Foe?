@@ -1,0 +1,8 @@
+def friend(x):
+    for i in range(len(x)-1,-1,-1):
+        a=len(x[i])
+        if a!=4:
+            x.remove(x[i])
+        elif x[i].isdigit()==True:
+            x.remove(x[i])
+    return x
