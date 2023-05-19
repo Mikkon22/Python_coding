@@ -1,0 +1,14 @@
+def tribonacci(signature, n):
+        if n==0:
+            return []
+        if n==1:
+            return [signature[0]]
+        if n==2:
+            return [signature[0],signature[1]]
+        list=[]
+        list.append(signature[0])
+        list.append(signature[1])
+        list.append(signature[2])
+        for i in range(2,n-1,1):
+            list.append(list[i-2]+list[i-1]+list[i])
+        return list
