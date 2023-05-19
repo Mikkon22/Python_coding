@@ -1,0 +1,16 @@
+import math
+def count_palindromes(a, b):
+    a=int(round(a,0))
+    b=int(round(b,0))
+    counter=0
+    for i in range(a,b+1,1):
+        if Palindrome(i)==True:
+            counter+=1
+    return counter
+def Palindrome(n):
+    n = [int(x) for x in str(n)]
+    result=True
+    for i in range(0,len(n), 1):
+            if n[i] != n[len(n)-1-i]:
+                result= False
+    return result
