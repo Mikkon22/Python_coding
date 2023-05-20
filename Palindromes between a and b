@@ -1,7 +1,7 @@
 import math
 def count_palindromes(a, b):
-    a=int(round(a,0))
-    b=int(round(b,0))
+    a=math.ceil(a)
+    b=math.floor(b)
     counter=0
     for i in range(a,b+1,1):
         if Palindrome(i)==True:
