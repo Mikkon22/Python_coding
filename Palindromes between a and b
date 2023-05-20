@@ -1,16 +1,16 @@
-import math
+from math import ceil 
+from math import floor
 def count_palindromes(a, b):
-    a=math.ceil(a)
-    b=math.floor(b)
+    a=ceil(a)
+    b=floor(b)
     counter=0
-    for i in range(a,b+1,1):
-        if Palindrome(i)==True:
+    for i in range(a,b+1,1): 
+        if palindrome(i)==True:
             counter+=1
     return counter
-def Palindrome(n):
+def palindrome(n):
     n = [int(x) for x in str(n)]
-    result=True
-    for i in range(0,len(n), 1):
-            if n[i] != n[len(n)-1-i]:
-                result= False
-    return result
+    if(n==n[::-1]):
+        return True
+    else:
+        return False
