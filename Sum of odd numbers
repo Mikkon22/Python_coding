@@ -6,7 +6,7 @@ def factorial(g):
 def row_sum_odd_numbers(n):
     result=0
     if n==1:
-        result=1
+        result=12
     else:
         start=factorial(n-1)*2+1
         for i in range((factorial(n-1)*2)+1,factorial(n-1)*2+2*n,2):
