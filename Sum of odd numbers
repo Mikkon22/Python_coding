@@ -1,14 +1,14 @@
-def silnia(g):
-    wynik=0
+def factorial(g):
+    result=0
     for i in range(1,g+1,1):
-        wynik+=i
-    return wynik
+        result+=i
+    return result
 def row_sum_odd_numbers(n):
-    wynik=0
+    result=0
     if n==1:
-        wynik=1
+        result=1
     else:
-        start=silnia(n-1)*2+1
-        for i in range((silnia(n-1)*2)+1,silnia(n-1)*2+2*n,2):
-            wynik+=i
-    return wynik
+        start=factorial(n-1)*2+1
+        for i in range((factorial(n-1)*2)+1,factorial(n-1)*2+2*n,2):
+            result+=i
+    return result
