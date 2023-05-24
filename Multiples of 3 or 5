@@ -1,0 +1,10 @@
+def solution(number):
+    list=[]
+    a=int((number-1)/3)
+    b=int((number-1)/5)
+    for i in range(0,a+1,1):
+        list.append(i*3)
+    for i in range(0,b+1,1):
+        if i*5 not in list:
+            list.append(i*5)
+    return sum(list)
