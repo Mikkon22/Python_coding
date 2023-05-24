@@ -1,0 +1,10 @@
+def digital_root(n):
+    if n==0:
+        return 0
+    n = str(n)
+    while len(n)>1:
+        list = []
+        for i in n:
+                list.append(int(i))
+        n=str(sum(list))
+    return int(n) 
