@@ -1,0 +1,31 @@
+def If_a_or_b(list):
+    counter=0
+    for i in list:
+        if i=="A" or i=="B":
+            counter+=1
+    if counter==len(list):
+        return True
+    else:
+        return False
+def find_hack(arr):
+    list=[]
+    for i in range(0,len(arr),1):
+        counter=0
+        for g in arr[i][2]:
+            if g=="A":
+                counter+=30
+            elif g=="B":
+                counter+=20
+            elif g=="C":
+                counter+=10
+            elif g=="D":
+                counter+=5
+        if If_a_or_b(arr[i][2])==True and len(arr[i][2])>=5:
+            counter+=20
+        if counter >= 200:
+            counter=200
+        if arr[i][1] > 200:
+            list.append(arr[i][0])
+        elif counter!=arr[i][1]:
+            list.append(arr[i][0])
+    return list
