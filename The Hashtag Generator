@@ -1,0 +1,21 @@
+def generate_hashtag(s):
+    if s=='':
+        return False
+    else:
+        list=["#"]
+        for i in s:
+            list.append(i)
+        for i in range(2,len(list)):
+            list[i]=list[i].lower()
+        list[1]=list[1].upper()
+        for i in range(0,len(list)-1):
+            if list[i]==" ":
+                list[i+1]=list[i+1].upper()
+        list= [i for i in list if i !=" "]
+        string=""
+        for i in list:
+            string=string+i
+        if len(string)>140:
+            return False
+        else:
+            return string
